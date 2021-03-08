@@ -1,0 +1,33 @@
+<div style="width: 80%; margin: auto;"> 
+  <div class="card">
+    <div class="card-header">
+      <button type="button" class="btn btn-primary btn-sm" routerLink="/add">Add</button>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped table-bordered table-sm row-border hover" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+        <thead class="thead-dark">
+          <tr>           
+            <th>ID</th>
+            <th>Brand</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Qantity</th>
+            <th>Unit</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of items">
+            <td>{{item.supplyid}}</td>
+            <td>{{item.brand}}</td>
+            <td>{{item.category}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.quantity}}</td>
+            <td>{{item.unit}}</td>
+            <td><button class="btn btn-primary btn-sm"  (click)="getId(item.supplyid)" routerLink="/update">Edit</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> 
+</div>

@@ -1,0 +1,28 @@
+<div style="width: 500px; margin: auto;"> 
+    <div class="card">
+      <div class="card-header">
+        Edit
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Category</label>
+          <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="category" >
+            <option value="computer supply">Computer supply</option>
+            <option value="janitorial supply">Janitorial supply</option>
+            <option value="office supply">Office supply</option>
+            <option value="electrical supply">Electrical supply</option>
+          </select>
+        </div>   
+        <label for="exampleFormControlInput1">Brand</label>
+          <input type="text" [(ngModel)]="brand"class="form-control">   
+        <label for="exampleFormControlInput1">Description</label>
+          <input type="text" [(ngModel)]="description"class="form-control">   
+        <label for="exampleFormControlInput1">Quantity</label>
+          <input type="text" [(ngModel)]="quantity" class="form-control">   
+        <label for="exampleFormControlInput1">Unit</label>
+         <input type="text" [(ngModel)]="unit"class="form-control">
+        <button class="btn btn-success mt-4" (click)="editbtn()">Edit</button>
+        <button class="btn btn-warning mt-4 ml-1" routerLink="/items">Cancel</button>
+      </div>
+    </div>
+  </div>
